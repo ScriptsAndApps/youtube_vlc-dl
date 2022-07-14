@@ -2,7 +2,14 @@
 
 set "URL=https://www.youtube.com/watch?v=_vrSXAPzLQY&ab_channel=Kontor.TV"
 
-set "File=out1.mp3"
+    rem set "File=out.mp3"
+
+ 	set "str=%URL%"
+ 	set "result=%str:?=" & set "result=%"
+ 	set "File=out_%result:~2,11%_.mp3"
+ 	
+echo "%URL%"
+echo %File%
 
 Title Download youtube
 mode con:cols=65 lines=3 & COLOR 0E
